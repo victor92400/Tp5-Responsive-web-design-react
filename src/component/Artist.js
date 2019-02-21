@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import artist from '../img/artist.png';
 import fbLogo from '../img/icon/fb.png';
 import twitterLogo from '../img/icon/twitter.png';
+import { Dropdown, DropdownToggle, Container, Col, Row } from 'reactstrap';
 
 export default class Artist extends Component {
   render() {
     return (
       <header>
-        <div class="name-photo">
+        <div class="name-photo row">
           <aside>
             <img src={artist} alt="artist" />
           </aside>
@@ -25,18 +26,24 @@ export default class Artist extends Component {
           </div>
         </div>
         <div class="stats-links">
-          <section class="stats">
-            <span>2 Playlists</span>
-            <span>4 Reviews</span>
-            <span>6 Followers</span>
-            <span>13 Following</span>
-          </section>
-          <div class="links">
-            <div>
-              <a href="#">Collection</a>
-              <a href="#">History</a>
-            </div>
-          </div>
+          <Row>
+            <Col xs="auto" md="9">
+              <section class="stats">
+                <span>2 Playlists</span>
+                <span>4 Reviews</span>
+                <span>6 Followers</span>
+                <span>13 Following</span>
+              </section>
+            </Col>
+            <Col xs="auto" md="3">
+              <div class="links">
+                <div>
+                  <a href="#">Collection</a>
+                  <a href="#">History</a>
+                </div>
+              </div>
+            </Col>
+          </Row>
         </div>
       </header>
     );
